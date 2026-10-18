@@ -1,0 +1,32 @@
+Exp1 sim/linear ratio (x0>0, finite): mean 1.902, range 1.859-2.060
+Exp1 cells with no onset <=2000 Pa: 1/40; cells NOT oscillating at 800 Pa: 7/40
+  Q=0.5: onset at 800 Pa for x0 in [-0.05, 0.0, 0.05, 0.1, 0.2, 0.4, 0.6, 1.0] mm
+  Q=0.8: onset at 800 Pa for x0 in [-0.05, 0.0, 0.05, 0.1, 0.2, 0.4, 0.6] mm
+  Q=1.0: onset at 800 Pa for x0 in [-0.05, 0.0, 0.05, 0.1, 0.2, 0.4, 0.6] mm
+  Q=1.4: onset at 800 Pa for x0 in [-0.05, 0.0, 0.05, 0.1, 0.2, 0.4] mm
+  Q=2.0: onset at 800 Pa for x0 in [-0.05, 0.0, 0.05, 0.1, 0.2] mm
+H2 Wilcoxon (all T_r, n=18 pairs): median(easy-hard)=568 Pa, W=0.0, p=0.00065
+H2 Wilcoxon (T_r>=50 ms, n=12): median(easy-hard)=621 Pa, p=0.00049
+Exp2 success: 71/72; failures: [['E1', 400.0, 1.4]]
+Exp3 success fractions:
+path  Tr_ms   k   n   p       lo  hi
+  E1   50.0 100 100 1.0 0.963005 1.0
+  E1  200.0 100 100 1.0 0.963005 1.0
+  E2   50.0 100 100 1.0 0.963005 1.0
+  E2  200.0 100 100 1.0 0.963005 1.0
+  H0   50.0 100 100 1.0 0.963005 1.0
+  H0  200.0 100 100 1.0 0.963005 1.0
+  H1   50.0 100 100 1.0 0.963005 1.0
+  H1  200.0 100 100 1.0 0.963005 1.0
+H3 T_r=50: p_easy-p_hard=0.000, bootstrap 95% CI [0.000,0.000]
+H3 T_r=200: p_easy-p_hard=0.000, bootstrap 95% CI [0.000,0.000]
+H4 onset time vs (Ps-Pth):
+ dP  t_on_ms
+  5    260.0
+ 10    160.0
+ 20     80.0
+ 40     40.0
+ 80     20.0
+160      0.0
+320      0.0
+  log-log slope -0.94 (95% CI -1.01 to -0.87), R^2=1.00

@@ -1,0 +1,10 @@
+variant,Ps_th,runs
+EPS=4um,259.765625,10
+EPS=0.25um,259.765625,10
+baseline,259.765625,10
+perturb 0.1um,263.671875,10
+symmetric_forcing (no half-cycle switch),138.671875,10
+perturb 20um,255.859375,10
+thr 0.1 cm3/s,255.859375,10
+rtol 1e-10,259.765625,10
+T=3 s,259.765625,10
