@@ -1,0 +1,144 @@
+## nominal steady-pressure sweep (5 Pa)
+  stage             cond  lowest_Ps  monotone
+0     A             easy        265      True
+1     A    hard rel 5 ms        260     False
+2     A   hard rel 20 ms        260     False
+3     A  hard rel 100 ms        270      True
+4     B             easy        201      True
+5     B    hard rel 5 ms        201      True
+6     B   hard rel 20 ms        201      True
+7     B  hard rel 100 ms        201      True
+## steady-pressure thresholds, 20 parameter draws
+  stage             cond                                                     threshold                                        easy_minus_hard  hard_lower  within_2Pa  hard_higher
+0     B             easy  median 200.9 [IQR 190.8, 209.3; range 179.1 to 227.7] (n=20)                                                    NaN         NaN         NaN          NaN
+1     B    hard rel 5 ms  median 199.2 [IQR 190.8, 207.6; range 175.7 to 232.8] (n=20)   median 1.7 [IQR 0.0, 3.4; range -15.1 to 5.0] (n=20)         6.0        13.0          1.0
+2     B   hard rel 20 ms  median 199.2 [IQR 190.8, 206.3; range 175.7 to 224.4] (n=20)    median 1.7 [IQR 0.0, 3.4; range -1.7 to 5.0] (n=20)         7.0        13.0          0.0
+3     B  hard rel 100 ms  median 201.7 [IQR 195.8, 209.3; range 175.7 to 224.4] (n=20)  median 0.0 [IQR -1.7, 1.7; range -18.5 to 3.4] (n=20)         3.0        15.0          2.0
+4     A             easy  median 270.6 [IQR 251.3, 280.3; range 232.0 to 305.7] (n=20)                                                    NaN         NaN         NaN          NaN
+5     A    hard rel 5 ms  median 269.4 [IQR 248.0, 280.3; range 232.0 to 304.6] (n=20)   median 1.1 [IQR -0.3, 3.3; range -3.3 to 8.9] (n=20)         9.0         9.0          2.0
+6     A   hard rel 20 ms  median 269.4 [IQR 248.5, 282.3; range 234.3 to 303.5] (n=20)   median 1.1 [IQR -1.1, 2.2; range -6.7 to 4.5] (n=20)         6.0        10.0          4.0
+7     A  hard rel 100 ms  median 270.6 [IQR 247.4, 281.2; range 229.8 to 303.5] (n=20)    median 2.2 [IQR 0.8, 3.3; range -2.2 to 7.8] (n=20)        12.0         6.0          2.0
+## onset delay at fixed pressure (50 draws)
+   stage  mult             cond            success                                                       delay_ms  kick_start                                            easy_minus_hard_ms  hard_shorter  hard_longer                               delay_from_release_end_ms
+0      A  1.05             easy  27/50 [0.40,0.67]   median 173.8 [IQR 109.4, 373.5; range 73.5 to 1085.9] (n=27)           5                                                           NaN           NaN          NaN                                                     NaN
+1      A  1.05    hard rel 5 ms  27/50 [0.40,0.67]           median 7.8 [IQR 7.7, 7.9; range 7.6 to 998.6] (n=27)          24    median 121.9 [IQR 87.3, 180.4; range 65.8 to 393.9] (n=25)          25.0          0.0    median 2.8 [IQR 2.7, 2.9; range 2.6 to 993.6] (n=27)
+2      A  1.05   hard rel 20 ms  27/50 [0.40,0.67]      median 21.3 [IQR 21.3, 21.4; range 21.1 to 1013.0] (n=27)          24    median 108.8 [IQR 74.1, 166.9; range 52.3 to 380.4] (n=25)          25.0          0.0    median 1.3 [IQR 1.3, 1.4; range 1.1 to 993.0] (n=27)
+3      A  1.05  hard rel 100 ms  28/50 [0.42,0.69]  median 105.0 [IQR 104.7, 135.0; range 104.1 to 1094.6] (n=28)           0    median 23.0 [IQR -9.0, 110.1; range -47.0 to 296.8] (n=26)          15.0         11.0   median 5.0 [IQR 4.7, 35.0; range 4.1 to 994.6] (n=28)
+4      A  1.10             easy  42/50 [0.71,0.92]    median 132.4 [IQR 88.2, 470.9; range 49.8 to 1086.4] (n=42)           9                                                           NaN           NaN          NaN                                                     NaN
+5      A  1.10    hard rel 5 ms  43/50 [0.74,0.93]         median 7.8 [IQR 7.8, 430.0; range 7.6 to 996.1] (n=43)          36   median 92.4 [IQR 73.4, 125.8; range -184.8 to 536.0] (n=42)          40.0          2.0  median 2.8 [IQR 2.8, 425.0; range 2.6 to 991.1] (n=43)
+6      A  1.10   hard rel 20 ms  42/50 [0.71,0.92]      median 21.3 [IQR 21.2, 21.4; range 21.1 to 1043.5] (n=42)          36    median 81.7 [IQR 64.1, 124.3; range -17.2 to 775.9] (n=41)          40.0          1.0   median 1.3 [IQR 1.2, 1.4; range 1.1 to 1023.5] (n=42)
+7      A  1.10  hard rel 100 ms  39/50 [0.65,0.87]  median 104.9 [IQR 104.6, 134.6; range 104.0 to 1090.5] (n=39)           2     median 1.0 [IQR -21.7, 51.5; range -54.4 to 147.3] (n=39)          20.0         19.0   median 4.9 [IQR 4.6, 34.6; range 4.0 to 990.5] (n=39)
+8      A  1.20             easy  48/50 [0.87,0.99]     median 89.7 [IQR 60.7, 125.2; range 34.2 to 1082.3] (n=48)           4                                                           NaN           NaN          NaN                                                     NaN
+9      A  1.20    hard rel 5 ms  50/50 [0.93,1.00]           median 7.8 [IQR 7.7, 7.9; range 7.5 to 996.9] (n=50)          49    median 80.0 [IQR 50.1, 101.3; range -29.4 to 620.3] (n=48)          47.0          1.0    median 2.8 [IQR 2.7, 2.9; range 2.5 to 991.9] (n=50)
+10     A  1.20   hard rel 20 ms  48/50 [0.87,0.99]      median 21.2 [IQR 21.2, 21.3; range 21.0 to 1011.9] (n=48)          47       median 64.6 [IQR 35.6, 83.1; range 5.2 to 260.0] (n=46)          46.0          0.0    median 1.2 [IQR 1.2, 1.3; range 1.0 to 991.9] (n=48)
+11     A  1.20  hard rel 100 ms  50/50 [0.93,1.00]  median 104.7 [IQR 104.3, 105.0; range 103.6 to 1091.7] (n=50)           4  median -26.2 [IQR -48.0, -6.6; range -124.5 to 522.9] (n=48)          10.0         38.0    median 4.7 [IQR 4.3, 5.0; range 3.6 to 991.7] (n=50)
+12     A  1.50             easy  50/50 [0.93,1.00]        median 41.3 [IQR 27.7, 52.8; range 17.4 to 90.2] (n=50)           0                                                           NaN           NaN          NaN                                                     NaN
+13     A  1.50    hard rel 5 ms  50/50 [0.93,1.00]             median 7.8 [IQR 7.6, 7.8; range 7.5 to 8.2] (n=50)          50        median 33.7 [IQR 20.1, 44.9; range 9.6 to 82.1] (n=50)          50.0          0.0      median 2.8 [IQR 2.6, 2.8; range 2.5 to 3.2] (n=50)
+14     A  1.50   hard rel 20 ms  50/50 [0.93,1.00]        median 21.2 [IQR 21.1, 21.3; range 20.9 to 21.6] (n=50)          50        median 20.2 [IQR 6.7, 31.5; range -3.8 to 68.6] (n=50)          45.0          5.0      median 1.2 [IQR 1.1, 1.3; range 0.9 to 1.6] (n=50)
+15     A  1.50  hard rel 100 ms  50/50 [0.93,1.00]   median 104.0 [IQR 103.7, 108.3; range 103.0 to 137.4] (n=50)           0  median -63.5 [IQR -76.1, -58.2; range -86.3 to -23.8] (n=50)           0.0         50.0     median 4.0 [IQR 3.7, 8.3; range 3.0 to 37.4] (n=50)
+16     B  1.05             easy  30/50 [0.46,0.72]       median 61.8 [IQR 31.0, 120.5; range 3.8 to 980.6] (n=30)           0                                                           NaN           NaN          NaN                                                     NaN
+17     B  1.05    hard rel 5 ms  32/50 [0.50,0.76]             median 8.3 [IQR 8.2, 8.4; range 8.1 to 8.6] (n=32)          32     median 53.4 [IQR 22.8, 112.1; range -4.6 to 972.4] (n=30)          29.0          1.0      median 3.3 [IQR 3.2, 3.4; range 3.1 to 3.6] (n=32)
+18     B  1.05   hard rel 20 ms  32/50 [0.50,0.76]        median 22.0 [IQR 21.9, 22.1; range 21.9 to 22.3] (n=32)          32      median 39.7 [IQR 9.1, 98.4; range -18.3 to 958.7] (n=30)          24.0          6.0      median 2.0 [IQR 1.9, 2.1; range 1.9 to 2.3] (n=32)
+19     B  1.05  hard rel 100 ms  32/50 [0.50,0.76]   median 100.3 [IQR 100.2, 117.8; range 100.1 to 819.0] (n=32)          19   median -54.1 [IQR -79.3, -8.4; range -97.7 to 637.7] (n=30)           7.0         23.0   median 0.3 [IQR 0.2, 17.8; range 0.1 to 719.0] (n=32)
+20     B  1.10             easy  40/50 [0.67,0.89]        median 31.1 [IQR 18.4, 41.4; range 1.6 to 958.3] (n=40)           1                                                           NaN           NaN          NaN                                                     NaN
+21     B  1.10    hard rel 5 ms  43/50 [0.74,0.93]             median 8.3 [IQR 8.2, 8.4; range 8.1 to 8.6] (n=43)          43      median 22.8 [IQR 10.2, 33.1; range -6.9 to 950.2] (n=40)          37.0          3.0      median 3.3 [IQR 3.2, 3.4; range 3.1 to 3.6] (n=43)
+22     B  1.10   hard rel 20 ms  43/50 [0.74,0.93]        median 22.0 [IQR 21.9, 22.1; range 21.8 to 22.3] (n=43)          43      median 9.0 [IQR -3.5, 19.4; range -20.5 to 936.4] (n=40)          27.0         13.0      median 2.0 [IQR 1.9, 2.1; range 1.8 to 2.3] (n=43)
+23     B  1.10  hard rel 100 ms  43/50 [0.74,0.93]  median 100.3 [IQR 100.1, 106.7; range 100.0 to 1052.1] (n=43)          23  median -75.4 [IQR -86.2, -63.8; range -183.8 to 86.8] (n=40)           2.0         38.0    median 0.3 [IQR 0.1, 6.7; range 0.0 to 952.1] (n=43)
+24     B  1.20             easy  50/50 [0.93,1.00]          median 11.9 [IQR 7.4, 17.6; range 1.4 to 76.1] (n=50)           2                                                           NaN           NaN          NaN                                                     NaN
+25     B  1.20    hard rel 5 ms  50/50 [0.93,1.00]             median 8.3 [IQR 8.2, 8.4; range 8.0 to 8.6] (n=50)          50         median 3.7 [IQR -0.8, 9.1; range -7.0 to 68.0] (n=50)          35.0         15.0      median 3.3 [IQR 3.2, 3.4; range 3.0 to 3.6] (n=50)
+26     B  1.20   hard rel 20 ms  49/50 [0.90,1.00]        median 22.0 [IQR 21.9, 22.0; range 21.7 to 22.3] (n=49)          49    median -10.1 [IQR -14.6, -4.9; range -20.6 to 54.3] (n=49)           9.0         40.0      median 2.0 [IQR 1.9, 2.0; range 1.7 to 2.3] (n=49)
+27     B  1.20  hard rel 100 ms  48/50 [0.87,0.99]    median 100.1 [IQR 100.0, 101.5; range 99.7 to 129.3] (n=48)          27  median -89.6 [IQR -93.4, -84.0; range -98.5 to -37.8] (n=48)           0.0         48.0    median 0.1 [IQR 0.0, 1.5; range -0.3 to 29.3] (n=48)
+28     B  1.50             easy  50/50 [0.93,1.00]             median 1.6 [IQR 1.4, 2.7; range 1.0 to 8.4] (n=50)          29                                                           NaN           NaN          NaN                                                     NaN
+29     B  1.50    hard rel 5 ms  50/50 [0.93,1.00]            median 8.3 [IQR 8.1, 8.3; range 8.0 to 11.7] (n=50)          49        median -6.8 [IQR -6.9, -5.7; range -9.8 to 0.3] (n=50)           2.0         48.0      median 3.3 [IQR 3.1, 3.3; range 3.0 to 6.7] (n=50)
+30     B  1.50   hard rel 20 ms  50/50 [0.93,1.00]        median 21.9 [IQR 21.8, 22.0; range 21.7 to 22.2] (n=50)          50  median -20.4 [IQR -20.5, -19.3; range -20.7 to -13.3] (n=50)           0.0         50.0      median 1.9 [IQR 1.8, 2.0; range 1.7 to 2.2] (n=50)
+31     B  1.50  hard rel 100 ms  50/50 [0.93,1.00]       median 99.3 [IQR 99.2, 99.5; range 98.7 to 101.2] (n=50)           0  median -97.5 [IQR -97.8, -97.0; range -98.7 to -91.5] (n=50)           0.0         50.0  median -0.7 [IQR -0.8, -0.5; range -1.3 to 1.2] (n=50)
+## H4 stage B: pooled log-log slope -1.62; per-seed slopes median -1.6 [IQR -1.7, -1.5; range -2.0 to -1.2] (n=10); successes 70/70; kick-start 20
+mult
+1.03    251.0
+1.05    112.9
+1.10     31.8
+1.20     11.4
+1.30      5.3
+1.50      1.4
+2.00      1.4
+## H4 stage A: pooled log-log slope -0.76; per-seed slopes median -0.8 [IQR -0.9, -0.7; range -0.9 to -0.5] (n=10); successes 69/70; kick-start 2
+mult
+1.03    344.7
+1.05    249.9
+1.10    119.2
+1.20     65.7
+1.30     55.4
+1.50     40.5
+2.00     27.8
+## paths (H2/H3)
+   stage  mult   Tr_ms             cond              success                                                          Ps_on                                                t_after_ramp_ms                                          easy_minus_hard_Ps       easy_lower_Ps hard_earlier  only_easy_starts  only_hard_starts  kick_start max_gap_held_mm
+0      A   1.2    25.0             easy   96/100 [0.90,0.98]   median 311.8 [IQR 300.2, 326.8; range 282.2 to 342.5] (n=96)      median 77.3 [IQR 48.3, 113.0; range 17.6 to 996.6] (n=96)                                                         NaN                 NaN          NaN               NaN               NaN         NaN             NaN
+1      A   1.2    25.0    hard rel 5 ms   96/100 [0.90,0.98]   median 311.8 [IQR 300.2, 326.8; range 282.2 to 342.5] (n=96)           median 7.7 [IQR 7.7, 7.9; range 7.5 to 995.2] (n=96)          median 0.0 [IQR 0.0, 0.0; range 0.0 to 0.0] (n=95)     0/95 (equal 95)        92/95               1.0               1.0        92.0          -0.047
+2      A   1.2    25.0   hard rel 20 ms   96/100 [0.90,0.98]   median 311.0 [IQR 300.2, 326.8; range 282.2 to 342.5] (n=96)      median 21.2 [IQR 21.1, 21.3; range 21.0 to 1009.7] (n=96)          median 0.0 [IQR 0.0, 0.0; range 0.0 to 0.0] (n=95)     0/95 (equal 95)        88/95               1.0               1.0        92.0          -0.047
+3      A   1.2    25.0  hard rel 100 ms   96/100 [0.90,0.98]   median 311.8 [IQR 301.5, 326.8; range 282.2 to 342.5] (n=96)  median 104.6 [IQR 104.3, 119.0; range 103.6 to 1089.4] (n=96)          median 0.0 [IQR 0.0, 0.0; range 0.0 to 0.0] (n=95)     0/95 (equal 95)        16/95               1.0               1.0         3.0          -0.047
+4      A   1.2   200.0             easy   97/100 [0.92,0.99]   median 311.1 [IQR 300.4, 326.6; range 282.2 to 342.0] (n=97)      median 53.1 [IQR 28.2, 95.0; range -13.4 to 991.1] (n=97)                                                         NaN                 NaN          NaN               NaN               NaN         NaN             NaN
+5      A   1.2   200.0    hard rel 5 ms   97/100 [0.92,0.99]   median 311.1 [IQR 300.4, 326.7; range 282.2 to 342.5] (n=97)           median 7.8 [IQR 7.6, 7.8; range 7.5 to 995.2] (n=97)        median 0.0 [IQR 0.0, 0.0; range -23.0 to 0.0] (n=97)     4/97 (equal 93)        84/97               0.0               0.0        94.0          -0.047
+6      A   1.2   200.0   hard rel 20 ms   96/100 [0.90,0.98]   median 311.8 [IQR 300.2, 326.8; range 282.2 to 342.5] (n=96)      median 21.2 [IQR 21.2, 21.3; range 21.0 to 1010.2] (n=96)        median 0.0 [IQR 0.0, 0.0; range -23.0 to 0.0] (n=96)     4/96 (equal 92)        72/96               1.0               0.0        92.0          -0.047
+7      A   1.2   200.0  hard rel 100 ms   95/100 [0.89,0.98]   median 311.1 [IQR 301.1, 327.0; range 282.2 to 342.5] (n=95)  median 104.6 [IQR 104.3, 121.7; range 103.5 to 1089.1] (n=95)        median 0.0 [IQR 0.0, 0.0; range -23.0 to 0.0] (n=95)     4/95 (equal 91)        13/95               2.0               0.0         3.0          -0.047
+8      A   1.2  1000.0             easy   96/100 [0.90,0.98]   median 296.4 [IQR 283.4, 309.2; range 257.3 to 334.5] (n=96)   median -19.6 [IQR -89.4, 36.2; range -211.7 to 986.9] (n=96)                                                         NaN                 NaN          NaN               NaN               NaN         NaN             NaN
+9      A   1.2  1000.0    hard rel 5 ms   97/100 [0.92,0.99]   median 311.1 [IQR 300.4, 326.7; range 282.2 to 342.5] (n=97)           median 7.7 [IQR 7.6, 7.8; range 7.5 to 995.1] (n=97)     median -6.2 [IQR -28.2, 0.0; range -71.1 to 0.0] (n=96)    61/96 (equal 35)        29/96               0.0               1.0        94.0          -0.047
+10     A   1.2  1000.0   hard rel 20 ms   96/100 [0.90,0.98]   median 311.8 [IQR 301.5, 326.8; range 282.2 to 342.5] (n=96)      median 21.2 [IQR 21.1, 21.3; range 21.0 to 1009.7] (n=96)     median -6.3 [IQR -28.5, 0.0; range -71.1 to 0.0] (n=95)    61/95 (equal 34)        25/95               1.0               1.0        93.0          -0.047
+11     A   1.2  1000.0  hard rel 100 ms   96/100 [0.90,0.98]   median 311.8 [IQR 301.5, 326.8; range 282.2 to 342.5] (n=96)  median 104.6 [IQR 104.3, 124.5; range 103.4 to 1089.1] (n=96)     median -6.3 [IQR -28.5, 0.0; range -71.1 to 0.0] (n=95)    61/95 (equal 34)         7/95               1.0               1.0         3.0          -0.047
+12     B   1.1   200.0             easy   77/100 [0.68,0.84]   median 218.2 [IQR 210.8, 227.2; range 195.0 to 236.0] (n=77)      median 74.2 [IQR 40.4, 132.1; range 12.5 to 962.3] (n=77)                                                         NaN                 NaN          NaN               NaN               NaN         NaN             NaN
+13     B   1.1   200.0    hard rel 5 ms   84/100 [0.76,0.90]   median 217.6 [IQR 208.7, 227.0; range 194.5 to 236.0] (n=84)             median 8.3 [IQR 8.2, 8.3; range 8.0 to 8.6] (n=84)          median 0.0 [IQR 0.0, 0.0; range 0.0 to 0.0] (n=77)     0/77 (equal 77)        77/77               0.0               7.0        84.0          -0.047
+14     B   1.1   200.0   hard rel 20 ms   83/100 [0.74,0.89]   median 217.6 [IQR 209.5, 227.1; range 194.5 to 236.0] (n=83)        median 22.0 [IQR 21.9, 22.1; range 21.8 to 22.3] (n=83)          median 0.0 [IQR 0.0, 0.0; range 0.0 to 0.0] (n=76)     0/76 (equal 76)        70/76               1.0               7.0        83.0          -0.047
+15     B   1.1   200.0  hard rel 100 ms   81/100 [0.72,0.87]   median 217.6 [IQR 210.1, 227.2; range 194.5 to 236.0] (n=81)   median 102.1 [IQR 100.2, 108.9; range 99.9 to 1064.4] (n=81)          median 0.0 [IQR 0.0, 0.0; range 0.0 to 0.0] (n=76)     0/76 (equal 76)        24/76               1.0               5.0        33.0          -0.047
+16     B   1.2    25.0             easy  193/200 [0.93,0.98]  median 235.5 [IQR 224.8, 246.5; range 211.9 to 257.5] (n=193)      median 57.6 [IQR 40.0, 90.6; range 14.9 to 648.4] (n=193)                                                         NaN                 NaN          NaN               NaN               NaN         NaN             NaN
+17     B   1.2    25.0    hard rel 5 ms  194/200 [0.94,0.99]  median 235.4 [IQR 224.8, 246.4; range 211.9 to 257.5] (n=194)            median 8.2 [IQR 8.2, 8.3; range 7.9 to 8.6] (n=194)         median 0.0 [IQR 0.0, 0.0; range 0.0 to 0.0] (n=192)   0/192 (equal 192)      192/192               1.0               2.0       194.0          -0.047
+18     B   1.2    25.0   hard rel 20 ms  195/200 [0.94,0.99]  median 235.3 [IQR 224.6, 246.3; range 211.9 to 257.5] (n=195)       median 22.0 [IQR 21.9, 22.0; range 21.7 to 22.3] (n=195)         median 0.0 [IQR 0.0, 0.0; range 0.0 to 0.0] (n=193)   0/193 (equal 193)      186/193               0.0               2.0       195.0          -0.047
+19     B   1.2    25.0  hard rel 100 ms  192/200 [0.92,0.98]  median 235.2 [IQR 224.7, 246.2; range 211.9 to 257.5] (n=192)   median 100.3 [IQR 100.0, 102.5; range 99.4 to 221.4] (n=192)         median 0.0 [IQR 0.0, 0.0; range 0.0 to 0.0] (n=191)   0/191 (equal 191)       35/191               2.0               1.0        76.0          -0.047
+20     B   1.2   200.0             easy  192/200 [0.92,0.98]  median 235.5 [IQR 224.7, 245.7; range 211.9 to 257.5] (n=192)      median 40.2 [IQR 18.5, 72.6; range -7.0 to 652.5] (n=192)                                                         NaN                 NaN          NaN               NaN               NaN         NaN             NaN
+21     B   1.2   200.0    hard rel 5 ms  191/200 [0.92,0.98]  median 235.1 [IQR 224.5, 246.3; range 211.9 to 257.5] (n=191)            median 8.2 [IQR 8.1, 8.3; range 8.0 to 8.6] (n=191)        median 0.0 [IQR 0.0, 0.0; range -8.8 to 0.0] (n=189)   7/189 (equal 182)      168/189               3.0               2.0       191.0          -0.047
+22     B   1.2   200.0   hard rel 20 ms  194/200 [0.94,0.99]  median 235.4 [IQR 224.6, 246.4; range 211.9 to 257.5] (n=194)      median 22.0 [IQR 21.9, 22.0; range 21.7 to 943.3] (n=194)        median 0.0 [IQR 0.0, 0.0; range -8.8 to 0.0] (n=192)   7/192 (equal 185)      133/192               0.0               2.0       194.0          -0.047
+23     B   1.2   200.0  hard rel 100 ms  192/200 [0.92,0.98]  median 235.4 [IQR 224.7, 246.2; range 211.9 to 257.5] (n=192)   median 100.4 [IQR 100.0, 103.3; range 99.4 to 414.7] (n=192)        median 0.0 [IQR 0.0, 0.0; range -8.8 to 0.0] (n=191)   7/191 (equal 184)       21/191               1.0               1.0        72.0          -0.047
+24     B   1.2  1000.0             easy  194/200 [0.94,0.99]  median 222.6 [IQR 214.4, 231.1; range 196.4 to 251.9] (n=194)   median -38.8 [IQR -83.3, 4.6; range -213.3 to 784.5] (n=194)                                                         NaN                 NaN          NaN               NaN               NaN         NaN             NaN
+25     B   1.2  1000.0    hard rel 5 ms  195/200 [0.94,0.99]  median 235.1 [IQR 224.5, 246.3; range 211.9 to 257.5] (n=195)            median 8.2 [IQR 8.1, 8.3; range 8.0 to 8.6] (n=195)    median -8.9 [IQR -19.5, 0.0; range -54.5 to 0.0] (n=193)  141/193 (equal 52)       45/193               1.0               2.0       195.0          -0.047
+26     B   1.2  1000.0   hard rel 20 ms  190/200 [0.91,0.97]  median 235.5 [IQR 224.9, 246.9; range 211.9 to 257.5] (n=190)     median 22.0 [IQR 21.9, 22.0; range 21.7 to 1045.2] (n=190)    median -9.4 [IQR -19.9, 0.0; range -54.5 to 0.0] (n=189)  140/189 (equal 49)       34/189               5.0               1.0       190.0          -0.047
+27     B   1.2  1000.0  hard rel 100 ms  192/200 [0.92,0.98]  median 235.2 [IQR 224.7, 245.7; range 211.9 to 257.5] (n=192)   median 100.2 [IQR 100.0, 102.6; range 99.2 to 260.8] (n=192)    median -8.9 [IQR -20.0, 0.0; range -54.5 to 0.0] (n=192)  140/192 (equal 52)       15/192               2.0               0.0        78.0          -0.047
+28     B   1.5   200.0             easy  100/100 [0.96,1.00]  median 273.9 [IQR 266.4, 288.8; range 237.6 to 321.4] (n=100)     median -9.3 [IQR -17.8, -0.1; range -42.5 to 41.1] (n=100)                                                         NaN                 NaN          NaN               NaN               NaN         NaN             NaN
+29     B   1.5   200.0    hard rel 5 ms  100/100 [0.96,1.00]  median 291.8 [IQR 280.9, 307.0; range 264.9 to 321.9] (n=100)           median 8.2 [IQR 8.1, 8.3; range 7.9 to 11.7] (n=100)  median -14.4 [IQR -26.1, -0.3; range -67.3 to 0.0] (n=100)   74/100 (equal 26)       13/100               0.0               0.0        98.0          -0.047
+30     B   1.5   200.0   hard rel 20 ms   99/100 [0.95,1.00]   median 292.1 [IQR 281.2, 307.0; range 264.9 to 321.9] (n=99)        median 21.9 [IQR 21.8, 22.0; range 21.7 to 22.2] (n=99)   median -14.5 [IQR -26.1, -0.7; range -67.3 to 0.0] (n=99)    74/99 (equal 25)         5/99               1.0               0.0        99.0          -0.047
+31     B   1.5   200.0  hard rel 100 ms   99/100 [0.95,1.00]   median 292.1 [IQR 281.2, 307.0; range 264.9 to 321.9] (n=99)       median 99.4 [IQR 99.2, 99.6; range 98.5 to 102.3] (n=99)   median -14.5 [IQR -26.1, -0.7; range -67.3 to 0.0] (n=99)    74/99 (equal 25)         0/99               1.0               0.0         0.0          -0.047
+## map stage B
+Q        0.50   0.65   0.80   1.00   1.20   1.40    1.70    2.00
+x0_mm                                                           
+-0.050   57.0   76.0   92.0  115.0  139.0  162.0   197.0   232.0
+ 0.000   29.0   61.0   14.0  197.0  232.0  186.0    14.0   350.0
+ 0.025  119.0  143.0  174.0  221.0  256.0  279.0   326.0   346.0
+ 0.050  123.0  146.0  174.0  213.0  244.0  271.0   322.0   346.0
+ 0.100    NaN  139.0  158.0  193.0  221.0  252.0   291.0   326.0
+ 0.150  107.0  131.0  158.0  189.0  217.0  248.0   291.0   334.0
+ 0.200  111.0  139.0  166.0  201.0  229.0  268.0   318.0   365.0
+ 0.300  127.0  162.0  197.0  244.0  287.0  330.0   396.0   463.0
+ 0.400  154.0  197.0  244.0  299.0  361.0  412.0   498.0   584.0
+ 0.500  186.0  240.0  291.0  361.0  432.0  502.0   607.0   709.0
+ 0.600  217.0  283.0  346.0  424.0  510.0  592.0   717.0   838.0
+ 0.700  252.0  326.0  400.0  494.0  588.0  686.0   826.0   971.0
+ 0.800  287.0  369.0  455.0  564.0  670.0  779.0   936.0  1104.0
+ 0.900  318.0  412.0  510.0  631.0  748.0  873.0  1053.0  1240.0
+ 1.000  354.0  459.0  564.0  701.0  830.0  967.0  1166.0  1377.0
+no onset <=2000: 1 / 120  no onset at 800: 13
+## map stage A
+Q        0.50   0.65    0.80    1.00    1.20    1.40    1.70    2.00
+x0_mm                                                               
+-0.050   61.0  107.0   123.0   119.0   189.0   166.0   279.0   236.0
+ 0.000    2.0    2.0     2.0     2.0     2.0     2.0     2.0     2.0
+ 0.025   18.0   21.0    25.0    33.0    41.0    45.0    57.0    64.0
+ 0.050   33.0   41.0    53.0    64.0    80.0    92.0   111.0   131.0
+ 0.100   64.0   84.0   107.0   131.0   158.0   186.0   225.0   260.0
+ 0.150  100.0  127.0   158.0   197.0   236.0   275.0   338.0   393.0
+ 0.200  131.0  170.0   213.0   260.0   314.0   369.0   447.0   521.0
+ 0.300  197.0  256.0   318.0   393.0   475.0   557.0   674.0   783.0
+ 0.400  264.0  342.0   424.0   521.0   631.0   740.0   896.0  1045.0
+ 0.500  330.0  428.0   529.0   654.0   791.0   928.0  1119.0  1307.0
+ 0.600  393.0  514.0   635.0   783.0   947.0  1111.0  1342.0  1572.0
+ 0.700  459.0  600.0   744.0   912.0  1104.0  1299.0  1564.0  1838.0
+ 0.800  752.0  686.0   850.0  1045.0  1264.0  1482.0  1783.0     NaN
+ 0.900  592.0  771.0   955.0  1174.0  1420.0  1697.0     NaN     NaN
+ 1.000  658.0  857.0  1061.0  1307.0  1576.0  1881.0     NaN     NaN
+no onset <=2000: 5 / 120  no onset at 800: 33

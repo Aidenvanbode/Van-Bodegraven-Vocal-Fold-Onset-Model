@@ -1,0 +1,9 @@
+stage,cond,lowest_Ps,monotone
+A,easy,265,True
+A,hard rel 5 ms,260,False
+A,hard rel 20 ms,260,False
+A,hard rel 100 ms,270,True
+B,easy,201,True
+B,hard rel 5 ms,201,True
+B,hard rel 20 ms,201,True
+B,hard rel 100 ms,201,True

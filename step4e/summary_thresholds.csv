@@ -1,0 +1,9 @@
+stage,cond,threshold,easy_minus_hard,hard_lower,within_2Pa,hard_higher
+B,easy,"median 200.9 [IQR 190.8, 209.3; range 179.1 to 227.7] (n=20)",,,,
+B,hard rel 5 ms,"median 199.2 [IQR 190.8, 207.6; range 175.7 to 232.8] (n=20)","median 1.7 [IQR 0.0, 3.4; range -15.1 to 5.0] (n=20)",6.0,13.0,1.0
+B,hard rel 20 ms,"median 199.2 [IQR 190.8, 206.3; range 175.7 to 224.4] (n=20)","median 1.7 [IQR 0.0, 3.4; range -1.7 to 5.0] (n=20)",7.0,13.0,0.0
+B,hard rel 100 ms,"median 201.7 [IQR 195.8, 209.3; range 175.7 to 224.4] (n=20)","median 0.0 [IQR -1.7, 1.7; range -18.5 to 3.4] (n=20)",3.0,15.0,2.0
+A,easy,"median 270.6 [IQR 251.3, 280.3; range 232.0 to 305.7] (n=20)",,,,
+A,hard rel 5 ms,"median 269.4 [IQR 248.0, 280.3; range 232.0 to 304.6] (n=20)","median 1.1 [IQR -0.3, 3.3; range -3.3 to 8.9] (n=20)",9.0,9.0,2.0
+A,hard rel 20 ms,"median 269.4 [IQR 248.5, 282.3; range 234.3 to 303.5] (n=20)","median 1.1 [IQR -1.1, 2.2; range -6.7 to 4.5] (n=20)",6.0,10.0,4.0
+A,hard rel 100 ms,"median 270.6 [IQR 247.4, 281.2; range 229.8 to 303.5] (n=20)","median 2.2 [IQR 0.8, 3.3; range -2.2 to 7.8] (n=20)",12.0,6.0,2.0

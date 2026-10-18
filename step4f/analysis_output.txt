@@ -1,0 +1,454 @@
+jobs 2855 errors 0
+
+# 1. DETECTOR FIX (baseline hold, R*=0.10)
+delays: 254 runs; 4e success reproduced by v1 in 254/254 (max |t_on diff| 9.71e-17 s)
+  v1 fails 41, of which end-level>=0.10 (decay-test fails) 18; rescued by trend test 1; still failing with level>=0.10: 17
+  rescued by condition: {('A', 'hard rel 20 ms'): 1}
+  rescued: v1 decay slope ratio info, trend slope per s median -0.5 [IQR -0.5, -0.5; range -0.5 to -0.5] (n=1)
+  still-fail with level>=0.1 (true decay by trend):    stage start  Trel_ms  mult  draw      endR    slopeR
+0      B  hard        5  1.05     2  0.122331 -2.425139
+1      B  hard       20  1.05     2  0.134847 -2.212307
+2      B  hard       20  1.20    10  0.829493 -1.670141
+3      A  easy        0  1.05     8  0.114461 -0.697221
+4      B  hard      100  1.20    14  0.655020 -1.878182
+5      A  easy        0  1.20    17  0.324992 -1.417924
+6      B  hard      100  1.20    31  0.759386 -2.371944
+7      A  easy        0  1.20    40  0.129768 -2.300462
+8      A  hard        5  1.05    41  0.173777 -1.731890
+9      A  hard        5  1.05    30  0.119752 -2.882275
+10     A  hard        5  1.05    46  0.109341 -2.146474
+11     A  hard       20  1.05    44  0.227771 -1.487019
+12     A  hard       20  1.05    41  0.173406 -2.520881
+14     A  hard       20  1.20    33  0.139062 -0.842436
+15     A  hard      100  1.05    41  0.139205 -1.045048
+16     A  hard      100  1.10    43  0.209649 -1.344326
+17     A  hard      100  1.10    22  0.135417 -1.947150
+paths: 202 runs; 4e success reproduced by v1 in 202/202 (max |t_on diff| 8.33e-17 s)
+  v1 fails 47, of which end-level>=0.10 (decay-test fails) 43; rescued by trend test 9; still failing with level>=0.10: 34
+  rescued by condition: {('A', 'hard rel 100 ms'): 1, ('A', 'hard rel 20 ms'): 1, ('B', 'hard rel 100 ms'): 2, ('B', 'hard rel 20 ms'): 3, ('B', 'hard rel 5 ms'): 2}
+  rescued: v1 decay slope ratio info, trend slope per s median -0.3 [IQR -0.4, -0.1; range -0.5 to 0.5] (n=9)
+  still-fail with level>=0.1 (true decay by trend):    stage start  Tr_ms  Trel_ms  mult  draw      endR    slopeR
+0      B  hard     25        5   1.2   193  0.726028 -0.820251
+1      B  hard     25       20   1.2   149  0.110863 -0.857353
+2      B  hard     25      100   1.2   159  0.726542 -0.602371
+3      B  hard     25      100   1.2    25  0.671407 -0.787944
+4      B  easy    200        0   1.2    43  0.469189 -1.963385
+5      B  easy    200        0   1.2    49  0.455953 -1.044093
+6      B  hard    200        5   1.2    43  0.842246 -1.894121
+8      B  hard    200        5   1.2   120  0.147874 -3.128437
+9      B  hard    200        5   1.2   149  0.115616 -1.902920
+10     B  hard    200        5   1.2   159  0.726228 -0.972681
+11     B  hard    200        5   1.2   160  0.450376 -2.288985
+12     B  hard    200       20   1.2    43  0.844110 -1.274534
+13     B  hard    200       20   1.2   120  0.134059 -4.037412
+14     B  hard    200      100   1.2    43  0.456522 -1.087429
+15     B  hard    200      100   1.2   159  0.528449 -0.577962
+18     B  hard   1000       20   1.2    49  0.457581 -2.303665
+19     B  hard   1000       20   1.2   104  0.854148 -1.626250
+21     B  hard   1000       20   1.2   114  0.747105 -3.177722
+22     A  easy     25        0   1.2    58  0.351624 -0.702481
+23     B  hard   1000       20   1.2   120  0.188762 -2.046130
+24     A  hard     25        5   1.2    93  0.237654 -0.582198
+26     A  hard     25      100   1.2    18  0.158364 -1.165930
+27     B  hard   1000      100   1.2   112  0.787511 -0.876917
+28     A  hard    200       20   1.2    71  0.100088 -2.171664
+29     A  hard    200       20   1.2    93  0.246407 -0.932925
+30     A  hard    200      100   1.2    32  0.214950 -1.268722
+32     B  easy    200        0   1.1    22  0.796025 -3.009185
+34     A  hard   1000       20   1.2    19  0.226229 -1.650714
+35     B  hard    200        5   1.1    49  0.153472 -2.174677
+36     A  hard   1000      100   1.2    19  0.232207 -0.858792
+37     B  hard    200        5   1.1    93  0.142345 -2.166620
+38     B  hard    200       20   1.1    49  0.181520 -2.454117
+39     B  hard    200       20   1.1    82  0.297654 -1.011569
+40     B  hard    200       20   1.1    93  0.115830 -2.534337
+thresholds: v1 re-run equals 4e in 160/160; v2 differs from v1 in 1
+   stage  cond  draw   Ps_th_v1       Ps_th
+95     A  easy    15  252.13793  249.905273
+h4: v1 fails 1, v2 fails 1 of 1
+
+# Step 4e results recomputed with fixed detector (v2) vs v1
+race v1 stage B:
+ mult  Trel_ms  hard_sooner  easy_sooner  n         succ_hard  median_easy_minus_hard_ms    w
+ 1.05        5           13            0 13 14/20 [0.48,0.85]                  60.795741 hard
+ 1.05       20           10            3 13 14/20 [0.48,0.85]                  47.054245 hard
+ 1.05      100            4            9 13 14/20 [0.48,0.85]                 -41.992863 easy
+ 1.20        5           13            7 20 20/20 [0.84,1.00]                   1.771315 hard
+ 1.20       20            3           16 19 19/20 [0.76,0.99]                 -12.375851 easy
+ 1.20      100            0           19 19 19/20 [0.76,0.99]                 -89.698208 easy
+ 1.50        5            0           20 20 20/20 [0.84,1.00]                  -6.814059 easy
+ 1.50       20            0           20 20 20/20 [0.84,1.00]                 -20.476190 easy
+ 1.50      100            0           20 20 20/20 [0.84,1.00]                 -97.581613 easy
+success counts: cond  easy  hard rel 100 ms  hard rel 20 ms  hard rel 5 ms
+mult                                                      
+1.05    13               14              14             14
+1.20    20               19              19             20
+1.50    20               20              20             20
+race v2 stage B:
+ mult  Trel_ms  hard_sooner  easy_sooner  n         succ_hard  median_easy_minus_hard_ms    w
+ 1.05        5           13            0 13 14/20 [0.48,0.85]                  60.795741 hard
+ 1.05       20           10            3 13 14/20 [0.48,0.85]                  47.054245 hard
+ 1.05      100            4            9 13 14/20 [0.48,0.85]                 -41.992863 easy
+ 1.20        5           13            7 20 20/20 [0.84,1.00]                   1.771315 hard
+ 1.20       20            3           16 19 19/20 [0.76,0.99]                 -12.375851 easy
+ 1.20      100            0           19 19 19/20 [0.76,0.99]                 -89.698208 easy
+ 1.50        5            0           20 20 20/20 [0.84,1.00]                  -6.814059 easy
+ 1.50       20            0           20 20 20/20 [0.84,1.00]                 -20.476190 easy
+ 1.50      100            0           20 20 20/20 [0.84,1.00]                 -97.581613 easy
+success counts: cond  easy  hard rel 100 ms  hard rel 20 ms  hard rel 5 ms
+mult                                                      
+1.05    13               14              14             14
+1.20    20               19              19             20
+1.50    20               20              20             20
+thresholds stage B (v2):
+stage setting            cond                                                         hard                                                         easy                                        hard_minus_easy  hard_lower_gt2  within2  hard_higher_gt2  n
+    B         hard rel 100 ms median 201.7 [IQR 195.8, 209.3; range 175.7 to 224.4] (n=20) median 200.9 [IQR 190.8, 209.3; range 179.1 to 227.7] (n=20)  median 0.0 [IQR -1.7, 1.7; range -3.4 to 18.5] (n=20)               3       15                2 20
+    B          hard rel 20 ms median 199.2 [IQR 190.8, 206.3; range 175.7 to 224.4] (n=20) median 200.9 [IQR 190.8, 209.3; range 179.1 to 227.7] (n=20)  median -1.7 [IQR -3.4, 0.0; range -5.0 to 1.7] (n=20)               7       13                0 20
+    B           hard rel 5 ms median 199.2 [IQR 190.8, 207.6; range 175.7 to 232.8] (n=20) median 200.9 [IQR 190.8, 209.3; range 179.1 to 227.7] (n=20) median -1.7 [IQR -3.4, 0.0; range -5.0 to 15.1] (n=20)               6       13                1 20
+thresholds stage A (v2):
+stage setting            cond                                                         hard                                                         easy                                        hard_minus_easy  hard_lower_gt2  within2  hard_higher_gt2  n
+    A         hard rel 100 ms median 270.6 [IQR 247.4, 281.2; range 229.8 to 303.5] (n=20) median 270.6 [IQR 249.6, 280.3; range 232.0 to 305.7] (n=20) median -2.2 [IQR -3.3, -0.6; range -7.8 to 2.2] (n=20)              12        5                3 20
+    A          hard rel 20 ms median 269.4 [IQR 248.5, 282.3; range 234.3 to 303.5] (n=20) median 270.6 [IQR 249.6, 280.3; range 232.0 to 305.7] (n=20)  median -0.6 [IQR -1.4, 1.1; range -4.5 to 6.7] (n=20)               5       11                4 20
+    A           hard rel 5 ms median 269.4 [IQR 248.0, 280.3; range 232.0 to 304.6] (n=20) median 270.6 [IQR 249.6, 280.3; range 232.0 to 305.7] (n=20)  median -0.6 [IQR -3.3, 0.3; range -8.9 to 3.3] (n=20)               8       10                2 20
+H3 path success v1 (Stage B, Tr 200 ms, 1.2x, draws 0-39):
+cond              easy  hard rel 100 ms  hard rel 20 ms  hard rel 5 ms
+stage Tr_ms mult                                                      
+B     200   1.2   39.0             39.0            39.0           38.0
+H3 path success v2 (Stage B, Tr 200 ms, 1.2x, draws 0-39):
+cond              easy  hard rel 100 ms  hard rel 20 ms  hard rel 5 ms
+stage Tr_ms mult                                                      
+B     200   1.2   39.0             39.0            39.0           39.0
+H2 (v2) paired onset pressure easy - hard:
+stage  Tr_ms  mult            cond  n  easy_lower  equal                                    easy_minus_hard
+    B    200   1.2 hard rel 100 ms 39           0     39 median 0.0 [IQR 0.0, 0.0; range 0.0 to 0.0] (n=39)
+    B    200   1.2  hard rel 20 ms 39           0     39 median 0.0 [IQR 0.0, 0.0; range 0.0 to 0.0] (n=39)
+    B    200   1.2   hard rel 5 ms 39           0     39 median 0.0 [IQR 0.0, 0.0; range 0.0 to 0.0] (n=39)
+
+# 2. SENSITIVITY
+
+  setting: K=2000 X=-0.05mm R*=0.10
+  race_pattern: 1.05x/5:H(13-0) 1.05x/20:H(10-3) 1.05x/100:E(4-9) 1.2x/5:H(13-7) 1.2x/20:E(3-16) 1.2x/100:E(0-19) 1.5x/5:E(0-20) 1.5x/20:E(0-20) 1.5x/100:E(0-20)
+  race_same_as_base: 9.0
+  race_cells: 9
+  thr hard rel 100 ms: hard-easy median: 0.0
+  thr hard rel 100 ms: lower/within/higher: 3/15/2
+  thr hard rel 20 ms: hard-easy median: -1.7
+  thr hard rel 20 ms: lower/within/higher: 7/13/0
+  thr hard rel 5 ms: hard-easy median: -1.7
+  thr hard rel 5 ms: lower/within/higher: 6/13/1
+  H3 success (Tr 200 ms): 1.2x easy:39, 1.2x hard rel 100 ms:39, 1.2x hard rel 20 ms:39, 1.2x hard rel 5 ms:39
+  max_gap_held_mm: -0.04680502076411861
+
+  setting: K=500 X=-0.05mm R*=0.10
+  race_pattern: 1.05x/5:H(13-0) 1.05x/20:H(12-0) 1.05x/100:E(0-13) 1.2x/5:H(19-0) 1.2x/20:H(20-0) 1.2x/100:E(0-19) 1.5x/5:E(4-16) 1.5x/20:E(2-18) 1.5x/100:E(0-20)
+  race_same_as_base: 8.0
+  race_cells: 9
+  thr hard rel 100 ms: hard-easy median: 0.0
+  thr hard rel 100 ms: lower/within/higher: 1/17/2
+  thr hard rel 20 ms: hard-easy median: -1.7
+  thr hard rel 20 ms: lower/within/higher: 5/15/0
+  thr hard rel 5 ms: hard-easy median: -1.7
+  thr hard rel 5 ms: lower/within/higher: 6/14/0
+  H3 success (Tr 200 ms): 1.2x easy:39, 1.2x hard rel 100 ms:39, 1.2x hard rel 20 ms:39, 1.2x hard rel 5 ms:39
+  max_gap_held_mm: -0.036532680542646634
+
+  setting: K=1000 X=-0.05mm R*=0.10
+  race_pattern: not run (reduced scale)
+  race_same_as_base: nan
+  race_cells: 0
+  thr hard rel 100 ms: hard-easy median: 0.0
+  thr hard rel 100 ms: lower/within/higher: 1/16/3
+  thr hard rel 20 ms: hard-easy median: -1.7
+  thr hard rel 20 ms: lower/within/higher: 5/15/0
+  thr hard rel 5 ms: hard-easy median: -1.7
+  thr hard rel 5 ms: lower/within/higher: 6/14/0
+  H3 success (Tr 200 ms): 1.2x easy:39
+  max_gap_held_mm: nan
+
+  setting: K=5000 X=-0.05mm R*=0.10
+  race_pattern: 1.05x/5:H(13-0) 1.05x/20:H(10-3) 1.05x/100:E(5-8) 1.2x/5:H(12-7) 1.2x/20:E(4-16) 1.2x/100:E(0-20) 1.5x/5:E(0-20) 1.5x/20:E(0-20) 1.5x/100:E(0-20)
+  race_same_as_base: 9.0
+  race_cells: 9
+  thr hard rel 100 ms: hard-easy median: -0.8
+  thr hard rel 100 ms: lower/within/higher: 5/14/1
+  thr hard rel 20 ms: hard-easy median: -1.7
+  thr hard rel 20 ms: lower/within/higher: 7/13/0
+  thr hard rel 5 ms: hard-easy median: -1.7
+  thr hard rel 5 ms: lower/within/higher: 6/14/0
+  H3 success (Tr 200 ms): 1.2x easy:39, 1.2x hard rel 100 ms:39, 1.2x hard rel 20 ms:39, 1.2x hard rel 5 ms:39
+  max_gap_held_mm: -0.04864005777942696
+
+  setting: K=2000 X=-0.02mm R*=0.10
+  race_pattern: 1.05x/5:H(13-0) 1.05x/20:H(10-3) 1.05x/100:E(3-10) 1.2x/5:H(13-7) 1.2x/20:E(4-16) 1.2x/100:E(0-19) 1.5x/5:E(0-20) 1.5x/20:E(0-20) 1.5x/100:E(0-20)
+  race_same_as_base: 9.0
+  race_cells: 9
+  thr hard rel 100 ms: hard-easy median: 0.0
+  thr hard rel 100 ms: lower/within/higher: 3/15/2
+  thr hard rel 20 ms: hard-easy median: -1.7
+  thr hard rel 20 ms: lower/within/higher: 6/14/0
+  thr hard rel 5 ms: hard-easy median: -1.7
+  thr hard rel 5 ms: lower/within/higher: 6/14/0
+  H3 success (Tr 200 ms): 1.2x easy:39, 1.2x hard rel 100 ms:39, 1.2x hard rel 20 ms:38, 1.2x hard rel 5 ms:38
+  max_gap_held_mm: -0.01772911543867063
+
+  setting: K=2000 X=-0.1mm R*=0.10
+  race_pattern: 1.05x/5:H(13-0) 1.05x/20:H(10-3) 1.05x/100:E(4-9) 1.2x/5:H(13-6) 1.2x/20:E(4-16) 1.2x/100:E(0-19) 1.5x/5:E(0-20) 1.5x/20:E(0-20) 1.5x/100:E(0-20)
+  race_same_as_base: 9.0
+  race_cells: 9
+  thr hard rel 100 ms: hard-easy median: 0.0
+  thr hard rel 100 ms: lower/within/higher: 3/14/3
+  thr hard rel 20 ms: hard-easy median: -1.7
+  thr hard rel 20 ms: lower/within/higher: 5/15/0
+  thr hard rel 5 ms: hard-easy median: -1.7
+  thr hard rel 5 ms: lower/within/higher: 6/14/0
+  H3 success (Tr 200 ms): 1.2x easy:39, 1.2x hard rel 100 ms:39, 1.2x hard rel 20 ms:39, 1.2x hard rel 5 ms:39
+  max_gap_held_mm: -0.09517275395486442
+
+  setting: K=2000 X=-0.05mm R*=0.05
+  race_pattern: 1.05x/5:E(2-12) 1.05x/20:E(2-12) 1.05x/100:E(2-12) 1.2x/5:E(0-20) 1.2x/20:E(0-19) 1.2x/100:E(0-19) 1.5x/5:E(0-20) 1.5x/20:E(0-20) 1.5x/100:E(0-20)
+  race_same_as_base: 6.0
+  race_cells: 9
+  thr hard rel 100 ms: hard-easy median: -1.7
+  thr hard rel 100 ms: lower/within/higher: 3/14/3
+  thr hard rel 20 ms: hard-easy median: 0.0
+  thr hard rel 20 ms: lower/within/higher: 5/13/2
+  thr hard rel 5 ms: hard-easy median: 0.0
+  thr hard rel 5 ms: lower/within/higher: 4/12/4
+  H3 success (Tr 200 ms): 1.2x easy:39, 1.2x hard rel 100 ms:39, 1.2x hard rel 20 ms:39, 1.2x hard rel 5 ms:39
+  max_gap_held_mm: nan
+
+  setting: K=2000 X=-0.05mm R*=0.20
+  race_pattern: 1.05x/5:H(12-0) 1.05x/20:H(12-0) 1.05x/100:E(4-8) 1.2x/5:H(20-0) 1.2x/20:H(16-3) 1.2x/100:E(0-19) 1.5x/5:H(14-6) 1.5x/20:E(1-19) 1.5x/100:E(0-20)
+  race_same_as_base: 7.0
+  race_cells: 9
+  thr hard rel 100 ms: hard-easy median: 0.0
+  thr hard rel 100 ms: lower/within/higher: 0/18/2
+  thr hard rel 20 ms: hard-easy median: -1.7
+  thr hard rel 20 ms: lower/within/higher: 9/11/0
+  thr hard rel 5 ms: hard-easy median: -1.7
+  thr hard rel 5 ms: lower/within/higher: 7/12/1
+  H3 success (Tr 200 ms): 1.2x easy:39, 1.2x hard rel 100 ms:39, 1.2x hard rel 20 ms:39, 1.2x hard rel 5 ms:39
+  max_gap_held_mm: nan
+
+K=2000 X=-0.05mm R*=0.10
+ mult  Trel_ms  hard_sooner  easy_sooner  n         succ_hard  median_easy_minus_hard_ms    w
+ 1.05        5           13            0 13 14/20 [0.48,0.85]                  60.795741 hard
+ 1.05       20           10            3 13 14/20 [0.48,0.85]                  47.054245 hard
+ 1.05      100            4            9 13 14/20 [0.48,0.85]                 -41.992863 easy
+ 1.20        5           13            7 20 20/20 [0.84,1.00]                   1.771315 hard
+ 1.20       20            3           16 19 19/20 [0.76,0.99]                 -12.375851 easy
+ 1.20      100            0           19 19 19/20 [0.76,0.99]                 -89.698208 easy
+ 1.50        5            0           20 20 20/20 [0.84,1.00]                  -6.814059 easy
+ 1.50       20            0           20 20 20/20 [0.84,1.00]                 -20.476190 easy
+ 1.50      100            0           20 20 20/20 [0.84,1.00]                 -97.581613 easy
+           cond                                                         hard                                        hard_minus_easy  hard_lower_gt2  within2  hard_higher_gt2
+hard rel 100 ms median 201.7 [IQR 195.8, 209.3; range 175.7 to 224.4] (n=20)  median 0.0 [IQR -1.7, 1.7; range -3.4 to 18.5] (n=20)               3       15                2
+ hard rel 20 ms median 199.2 [IQR 190.8, 206.3; range 175.7 to 224.4] (n=20)  median -1.7 [IQR -3.4, 0.0; range -5.0 to 1.7] (n=20)               7       13                0
+  hard rel 5 ms median 199.2 [IQR 190.8, 207.6; range 175.7 to 232.8] (n=20) median -1.7 [IQR -3.4, 0.0; range -5.0 to 15.1] (n=20)               6       13                1
+
+K=500 X=-0.05mm R*=0.10
+ mult  Trel_ms  hard_sooner  easy_sooner  n         succ_hard  median_easy_minus_hard_ms    w
+ 1.05        5           13            0 13 14/20 [0.48,0.85]                  83.702925 hard
+ 1.05       20           12            0 12 13/20 [0.43,0.82]                  80.316144 hard
+ 1.05      100            0           13 13 13/20 [0.43,0.82]                -186.170654 easy
+ 1.20        5           19            0 19 19/20 [0.76,0.99]                  24.962072 hard
+ 1.20       20           20            0 20 20/20 [0.84,1.00]                   8.818781 hard
+ 1.20      100            0           19 19 19/20 [0.76,0.99]                -149.893899 easy
+ 1.50        5            4           16 20 20/20 [0.84,1.00]                  -4.224261 easy
+ 1.50       20            2           18 20 20/20 [0.84,1.00]                 -15.833375 easy
+ 1.50      100            0           20 20 20/20 [0.84,1.00]                -114.802960 easy
+           cond                                                         hard                                       hard_minus_easy  hard_lower_gt2  within2  hard_higher_gt2
+hard rel 100 ms median 200.9 [IQR 190.8, 211.0; range 177.4 to 224.4] (n=20)  median 0.0 [IQR -0.4, 1.7; range -3.4 to 3.4] (n=20)               1       17                2
+ hard rel 20 ms median 199.2 [IQR 190.8, 207.6; range 177.4 to 222.7] (n=20) median -1.7 [IQR -2.1, 0.0; range -5.0 to 0.0] (n=20)               5       15                0
+  hard rel 5 ms median 199.2 [IQR 190.8, 206.3; range 175.7 to 224.4] (n=20) median -1.7 [IQR -3.4, 0.0; range -5.0 to 1.7] (n=20)               6       14                0
+
+K=1000 X=-0.05mm R*=0.10
+race not run
+           cond                                                         hard                                       hard_minus_easy  hard_lower_gt2  within2  hard_higher_gt2
+hard rel 100 ms median 200.9 [IQR 192.1, 211.8; range 177.4 to 224.4] (n=20)  median 0.0 [IQR -0.4, 0.4; range -3.4 to 3.4] (n=20)               1       16                3
+ hard rel 20 ms median 199.2 [IQR 190.8, 207.6; range 177.4 to 224.4] (n=20) median -1.7 [IQR -2.1, 0.0; range -5.0 to 0.0] (n=20)               5       15                0
+  hard rel 5 ms median 199.2 [IQR 190.8, 206.3; range 175.7 to 224.4] (n=20) median -1.7 [IQR -3.4, 0.0; range -5.0 to 1.7] (n=20)               6       14                0
+
+K=5000 X=-0.05mm R*=0.10
+ mult  Trel_ms  hard_sooner  easy_sooner  n         succ_hard  median_easy_minus_hard_ms    w
+ 1.05        5           13            0 13 14/20 [0.48,0.85]                  60.500957 hard
+ 1.05       20           10            3 13 14/20 [0.48,0.85]                  46.668757 hard
+ 1.05      100            5            8 13 14/20 [0.48,0.85]                 -31.585211 easy
+ 1.20        5           12            7 19 19/20 [0.76,0.99]                   1.048185 hard
+ 1.20       20            4           16 20 20/20 [0.84,1.00]                 -12.355669 easy
+ 1.20      100            0           20 20 20/20 [0.84,1.00]                 -90.473583 easy
+ 1.50        5            0           20 20 20/20 [0.84,1.00]                  -7.142857 easy
+ 1.50       20            0           20 20 20/20 [0.84,1.00]                 -20.941043 easy
+ 1.50      100            0           20 20 20/20 [0.84,1.00]                 -98.877551 easy
+           cond                                                         hard                                       hard_minus_easy  hard_lower_gt2  within2  hard_higher_gt2
+hard rel 100 ms median 198.4 [IQR 190.8, 208.9; range 175.7 to 222.7] (n=20) median -0.8 [IQR -2.1, 0.0; range -5.0 to 3.4] (n=20)               5       14                1
+ hard rel 20 ms median 199.2 [IQR 190.8, 206.3; range 175.7 to 224.4] (n=20) median -1.7 [IQR -3.4, 0.0; range -5.0 to 1.7] (n=20)               7       13                0
+  hard rel 5 ms median 199.2 [IQR 190.8, 207.6; range 175.7 to 224.4] (n=20) median -1.7 [IQR -3.4, 0.0; range -5.0 to 1.7] (n=20)               6       14                0
+
+K=2000 X=-0.02mm R*=0.10
+ mult  Trel_ms  hard_sooner  easy_sooner  n         succ_hard  median_easy_minus_hard_ms    w
+ 1.05        5           13            0 13 14/20 [0.48,0.85]                  60.886444 hard
+ 1.05       20           10            3 13 14/20 [0.48,0.85]                  47.099596 hard
+ 1.05      100            3           10 13 14/20 [0.48,0.85]                 -82.720099 easy
+ 1.20        5           13            7 20 20/20 [0.84,1.00]                   1.850680 hard
+ 1.20       20            4           16 20 20/20 [0.84,1.00]                 -11.913493 easy
+ 1.20      100            0           19 19 19/20 [0.76,0.99]                 -92.003752 easy
+ 1.50        5            0           20 20 20/20 [0.84,1.00]                  -6.746032 easy
+ 1.50       20            0           20 20 20/20 [0.84,1.00]                 -20.464853 easy
+ 1.50      100            0           20 20 20/20 [0.84,1.00]                 -98.172372 easy
+           cond                                                         hard                                       hard_minus_easy  hard_lower_gt2  within2  hard_higher_gt2
+hard rel 100 ms median 200.0 [IQR 190.8, 215.1; range 175.7 to 224.4] (n=20) median 0.0 [IQR -1.7, 1.7; range -3.4 to 15.1] (n=20)               3       15                2
+ hard rel 20 ms median 199.2 [IQR 190.8, 207.6; range 175.7 to 224.4] (n=20) median -1.7 [IQR -3.4, 0.0; range -5.0 to 1.7] (n=20)               6       14                0
+  hard rel 5 ms median 199.2 [IQR 190.8, 207.6; range 175.7 to 224.4] (n=20) median -1.7 [IQR -3.4, 0.0; range -5.0 to 1.7] (n=20)               6       14                0
+
+K=2000 X=-0.1mm R*=0.10
+ mult  Trel_ms  hard_sooner  easy_sooner  n         succ_hard  median_easy_minus_hard_ms    w
+ 1.05        5           13            0 13 14/20 [0.48,0.85]                  60.614335 hard
+ 1.05       20           10            3 13 14/20 [0.48,0.85]                  47.190299 hard
+ 1.05      100            4            9 13 14/20 [0.48,0.85]                 -42.128918 easy
+ 1.20        5           13            6 19 19/20 [0.76,0.99]                   1.972902 hard
+ 1.20       20            4           16 20 20/20 [0.84,1.00]                 -11.834128 easy
+ 1.20      100            0           19 19 19/20 [0.76,0.99]                 -89.523697 easy
+ 1.50        5            0           20 20 20/20 [0.84,1.00]                  -7.029478 easy
+ 1.50       20            0           20 20 20/20 [0.84,1.00]                 -20.430839 easy
+ 1.50      100            0           20 20 20/20 [0.84,1.00]                 -98.219955 easy
+           cond                                                         hard                                       hard_minus_easy  hard_lower_gt2  within2  hard_higher_gt2
+hard rel 100 ms median 200.9 [IQR 195.4, 209.3; range 175.7 to 224.4] (n=20) median 0.0 [IQR -1.7, 0.4; range -3.4 to 18.5] (n=20)               3       14                3
+ hard rel 20 ms median 199.2 [IQR 190.8, 207.6; range 177.4 to 224.4] (n=20) median -1.7 [IQR -2.1, 0.0; range -5.0 to 1.7] (n=20)               5       15                0
+  hard rel 5 ms median 199.2 [IQR 190.8, 207.6; range 175.7 to 224.4] (n=20) median -1.7 [IQR -3.4, 0.0; range -5.0 to 1.7] (n=20)               6       14                0
+
+K=2000 X=-0.05mm R*=0.05
+ mult  Trel_ms  hard_sooner  easy_sooner  n         succ_hard  median_easy_minus_hard_ms    w
+ 1.05        5            2           12 14 14/20 [0.48,0.85]                  -6.972789 easy
+ 1.05       20            2           12 14 14/20 [0.48,0.85]                 -20.668934 easy
+ 1.05      100            2           12 14 14/20 [0.48,0.85]                 -98.730159 easy
+ 1.20        5            0           20 20 20/20 [0.84,1.00]                  -6.927438 easy
+ 1.20       20            0           19 19 19/20 [0.76,0.99]                 -20.623583 easy
+ 1.20      100            0           19 19 19/20 [0.76,0.99]                 -98.560091 easy
+ 1.50        5            0           20 20 20/20 [0.84,1.00]                  -6.836735 easy
+ 1.50       20            0           20 20 20/20 [0.84,1.00]                 -20.510204 easy
+ 1.50      100            0           20 20 20/20 [0.84,1.00]                 -96.906558 easy
+           cond                                                         hard                                        hard_minus_easy  hard_lower_gt2  within2  hard_higher_gt2
+hard rel 100 ms median 199.2 [IQR 190.4, 208.9; range 174.0 to 219.3] (n=20) median -1.7 [IQR -1.7, 0.4; range -8.4 to 23.5] (n=20)               3       14                3
+ hard rel 20 ms median 199.2 [IQR 190.8, 205.9; range 175.7 to 224.4] (n=20)   median 0.0 [IQR -2.1, 0.4; range -3.4 to 5.0] (n=20)               5       13                2
+  hard rel 5 ms median 199.2 [IQR 190.8, 207.6; range 174.0 to 232.8] (n=20)  median 0.0 [IQR -1.7, 1.7; range -3.4 to 18.5] (n=20)               4       12                4
+
+K=2000 X=-0.05mm R*=0.20
+ mult  Trel_ms  hard_sooner  easy_sooner  n         succ_hard  median_easy_minus_hard_ms    w
+ 1.05        5           12            0 12 14/20 [0.48,0.85]                 142.876440 hard
+ 1.05       20           12            0 12 14/20 [0.48,0.85]                 130.528492 hard
+ 1.05      100            4            8 12 13/20 [0.43,0.82]                 -48.254362 easy
+ 1.20        5           20            0 20 20/20 [0.84,1.00]                  27.166066 hard
+ 1.20       20           16            3 19 19/20 [0.76,0.99]                  13.623450 hard
+ 1.20      100            0           19 19 19/20 [0.76,0.99]                 -79.549010 easy
+ 1.50        5           14            6 20 20/20 [0.84,1.00]                   0.820223 hard
+ 1.50       20            1           19 20 20/20 [0.84,1.00]                 -11.761558 easy
+ 1.50      100            0           20 20 20/20 [0.84,1.00]                 -92.006106 easy
+           cond                                                         hard                                         hard_minus_easy  hard_lower_gt2  within2  hard_higher_gt2
+hard rel 100 ms median 202.6 [IQR 197.1, 215.6; range 177.4 to 226.1] (n=20)   median 0.0 [IQR -1.7, 1.7; range -1.7 to 18.5] (n=20)               0       18                2
+ hard rel 20 ms median 199.2 [IQR 190.8, 207.6; range 175.7 to 224.4] (n=20)  median -1.7 [IQR -3.4, -1.7; range -5.0 to 0.0] (n=20)               9       11                0
+  hard rel 5 ms median 199.2 [IQR 190.8, 207.6; range 177.4 to 232.8] (n=20) median -1.7 [IQR -3.4, -1.7; range -5.0 to 13.4] (n=20)               7       12                1
+
+# MAPS (displacement criterion, rows x0 = 0, 0.05, 0.2 mm)
+stage B:
+        Ps_th                                                  Ps_th_4e_flowR                                                 
+Q        0.50   0.65   0.80   1.00   1.20   1.40   1.70   2.00           0.50   0.65   0.80   1.00   1.20   1.40   1.70   2.00
+x0_mm                                                                                                                         
+-0.050   76.0  100.0  119.0  150.0  182.0  213.0  256.0  303.0           57.0   76.0   92.0  115.0  139.0  162.0  197.0  232.0
+ 0.000   29.0   61.0  146.0  201.0  244.0  279.0  322.0  365.0           29.0   61.0   14.0  197.0  232.0  186.0   14.0  350.0
+ 0.025  119.0  146.0  182.0  221.0  260.0  291.0  342.0  389.0          119.0  143.0  174.0  221.0  256.0  279.0  326.0  346.0
+ 0.050  123.0  150.0  178.0  213.0  244.0  275.0  322.0  365.0          123.0  146.0  174.0  213.0  244.0  271.0  322.0  346.0
+ 0.100  111.0  139.0  162.0  193.0  225.0  252.0  291.0  330.0            NaN  139.0  158.0  193.0  221.0  252.0  291.0  326.0
+ 0.150  107.0  135.0  158.0  189.0  221.0  252.0  291.0  334.0          107.0  131.0  158.0  189.0  217.0  248.0  291.0  334.0
+ 0.200  111.0  139.0  166.0  201.0  229.0  268.0  318.0  365.0          111.0  139.0  166.0  201.0  229.0  268.0  318.0  365.0
+ 0.300  127.0  162.0  197.0  240.0  287.0  330.0  396.0  459.0          127.0  162.0  197.0  244.0  287.0  330.0  396.0  463.0
+ 0.400  154.0  197.0  240.0  299.0  361.0  412.0  498.0    NaN          154.0  197.0  244.0  299.0  361.0  412.0  498.0    NaN
+ 0.500  182.0  236.0    NaN    NaN    NaN    NaN    NaN    NaN          186.0  240.0    NaN    NaN    NaN    NaN    NaN    NaN
+  |X - flowR(4e)| on x0>0 cells: median 0.0 [IQR 0.0, 3.9; range 0.0 to 70.3] (n=64)
+stage A:
+       Ps_th                                                  Ps_th_4e_flowR                                                 
+Q       0.50   0.65   0.80   1.00   1.20   1.40   1.70   2.00           0.50   0.65   0.80   1.00   1.20   1.40   1.70   2.00
+x0_mm                                                                                                                        
+0.00    14.0   21.0   25.0   29.0   37.0   41.0   53.0   61.0            2.0    2.0    2.0    2.0    2.0    2.0    2.0    2.0
+0.05    37.0   45.0   57.0   72.0   84.0  100.0  119.0  143.0           33.0   41.0   53.0   64.0   80.0   92.0  111.0  131.0
+0.20   131.0  174.0  213.0  264.0  318.0  373.0  447.0  525.0          131.0  170.0  213.0  260.0  314.0  369.0  447.0  521.0
+  |X - flowR(4e)| on x0>0 cells: median 3.9 [IQR 3.9, 4.9; range 0.0 to 11.7] (n=16)
+
+# NON-MONOTONE STAGE A HARD SWEEPS
+rel 5 seed 7 T_after 1.0: first on 260.0, last off 270.0, on->off flips 1; .....#####.##########
+rel 5 seed 7 T_after 2.0: first on 260.0, last off 258.0, on->off flips 0; .....################
+rel 5 seed 8 T_after 1.0: first on 262.0, last off 260.0, on->off flips 0; ......###############
+rel 20 seed 7 T_after 1.0: first on 260.0, last off 270.0, on->off flips 1; .....#####.##########
+rel 20 seed 7 T_after 2.0: first on 262.0, last off 260.0, on->off flips 0; ......###############
+rel 20 seed 8 T_after 1.0: first on 262.0, last off 264.0, on->off flips 1; ......#.#############
+rel 100 seed 7 T_after 1.0: first on 266.0, last off 264.0, on->off flips 0; ........#############
+rel 100 seed 7 T_after 2.0: first on 262.0, last off 260.0, on->off flips 0; ......###############
+rel 100 seed 8 T_after 1.0: first on 262.0, last off 260.0, on->off flips 0; ......###############
+4e nominal sweep stage A hard near 250-300:
+Trel_ms  0.0    5.0    20.0   100.0
+Ps                                 
+250        0.0    0.0    0.0    0.0
+255        0.0    0.0    0.0    0.0
+260        0.0    1.0    1.0    0.0
+265        1.0    1.0    1.0    0.0
+270        1.0    0.0    0.0    1.0
+275        1.0    1.0    1.0    1.0
+280        1.0    1.0    1.0    1.0
+285        1.0    1.0    1.0    1.0
+290        1.0    1.0    1.0    1.0
+295        1.0    1.0    1.0    1.0
+300        1.0    1.0    1.0    1.0
+
+# V3
+stage  beta  Gamma_th   P_lin        eq5    P_on   P_off  onset_minus_offset  ratio_on_vs_beta1  1/beta  high_ok
+    B  1.00    47.795 136.558 682792.085 200.317 198.361               1.956              1.000   1.000     True
+    B  0.90    43.016 151.732 682792.085 212.036 210.794               1.242              1.059   1.111     True
+    B  0.80    38.236 170.698 682792.085 228.882 225.753               3.129              1.143   1.250     True
+    B  0.72    34.413 189.664 682792.085 244.263 242.831               1.431              1.219   1.389     True
+    A  1.00    47.795 136.558 682792.085 266.968 263.057               3.911              1.000   1.000     True
+    A  0.90    43.016 151.732 682792.085 297.729 294.531               3.198              1.115   1.111     True
+    A  0.80    38.236 170.698 682792.085 332.886 326.709               6.177              1.247   1.250     True
+    A  0.72    34.413 189.664 682792.085 376.099 364.713              11.386              1.409   1.389     True
+    B  0.64    30.589 213.373 682792.085 265.503 263.169               2.334              1.325   1.562     True
+    A  0.64    30.589 213.373 682792.085 409.058 403.066               5.992              1.532   1.562     True
+
+# V7
+stage    Q  P_lin   P_on  P_off  onset_minus_offset  high_ok
+    B 0.20  27.31  51.09  50.89                0.20     True
+    B 0.40  54.62  91.00  90.83                0.18     True
+    B 0.80 109.25 164.25 162.80                1.44     True
+    B 1.00 136.56 200.13 198.77                1.37     True
+    A 0.20  27.31  55.85  51.70                4.14     True
+    B 1.40 191.18 266.78 265.35                1.43     True
+    A 0.40  54.62 106.38 104.93                1.45     True
+    B 1.71 233.51 317.32 316.86                0.46     True
+    A 0.60  81.94 156.92 156.16                0.77     True
+    B 1.80 245.81 331.24 330.11                1.13     True
+    A 0.80 109.25 210.39 209.36                1.03     True
+    A 1.00 136.56 267.15 263.37                3.78     True
+    A 1.40 191.18 369.69 364.46                5.23     True
+    A 1.60 218.49 415.10 413.68                1.42     True
+    A 1.71 233.51 457.95 453.25                4.70     True
+    A 1.80 245.81 472.23 468.77                3.46     True
+    A 1.20 163.87 313.29 317.19               -3.90     True
+    B 0.60  81.94 127.62 127.51                0.11     True
+    B 1.20 163.87 229.06 230.17               -1.11     True
+    B 1.60 218.49 298.28 298.96               -0.68     True
+stage   Q    Ps  K_ADD  X_AD_mm      sec  succ_R0.1     endR         F0
+    B 1.0 800.0 2000.0    -0.05 4.039551       True 3.436959 264.071856
+    A 1.0 800.0 2000.0    -0.05 2.589038       True 2.712809 155.281690
+
+# ROBUSTNESS (wide draws)
+draws 100, with threshold <=1500 Pa: 100; threshold median 199.4 [IQR 172.1, 224.9; range 117.3 to 318.3] (n=100); F0 median 174.4 [IQR 147.9, 262.3; range 127.5 to 484.6] (n=100)
+baseline (4e-style, nominal-family) pattern: {'1.05/5': 'H', '1.05/20': 'H', '1.05/100': 'E', '1.2/5': 'H', '1.2/20': 'E', '1.2/100': 'E', '1.5/5': 'E', '1.5/20': 'E', '1.5/100': 'E'}
+  cell 1.05/5: H=84, E=14, n/a=2 (base H)
+  cell 1.05/20: H=74, E=22, n/a=4 (base H)
+  cell 1.05/100: E=89, H=7, n/a=4 (base E)
+  cell 1.2/5: H=56, E=44 (base H)
+  cell 1.2/20: E=77, H=23 (base E)
+  cell 1.2/100: E=100 (base E)
+  cell 1.5/5: E=76, H=23, n/a=1 (base E)
+  cell 1.5/20: E=88, H=11, n/a=1 (base E)
+  cell 1.5/100: E=99, n/a=1 (base E)
+all 9 cells match: 28/100 [0.20,0.37]; all valid cells match: 29/100 [0.21,0.39]; core pattern: 76/100 [0.67,0.83]
+n_match distribution {3: 1, 4: 3, 5: 2, 6: 22, 7: 18, 8: 26, 9: 28}

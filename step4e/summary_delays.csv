@@ -1,0 +1,33 @@
+stage,mult,cond,success,delay_ms,kick_start,easy_minus_hard_ms,hard_shorter,hard_longer,delay_from_release_end_ms
+A,1.05,easy,"27/50 [0.40,0.67]","median 173.8 [IQR 109.4, 373.5; range 73.5 to 1085.9] (n=27)",5,,,,
+A,1.05,hard rel 5 ms,"27/50 [0.40,0.67]","median 7.8 [IQR 7.7, 7.9; range 7.6 to 998.6] (n=27)",24,"median 121.9 [IQR 87.3, 180.4; range 65.8 to 393.9] (n=25)",25.0,0.0,"median 2.8 [IQR 2.7, 2.9; range 2.6 to 993.6] (n=27)"
+A,1.05,hard rel 20 ms,"27/50 [0.40,0.67]","median 21.3 [IQR 21.3, 21.4; range 21.1 to 1013.0] (n=27)",24,"median 108.8 [IQR 74.1, 166.9; range 52.3 to 380.4] (n=25)",25.0,0.0,"median 1.3 [IQR 1.3, 1.4; range 1.1 to 993.0] (n=27)"
+A,1.05,hard rel 100 ms,"28/50 [0.42,0.69]","median 105.0 [IQR 104.7, 135.0; range 104.1 to 1094.6] (n=28)",0,"median 23.0 [IQR -9.0, 110.1; range -47.0 to 296.8] (n=26)",15.0,11.0,"median 5.0 [IQR 4.7, 35.0; range 4.1 to 994.6] (n=28)"
+A,1.1,easy,"42/50 [0.71,0.92]","median 132.4 [IQR 88.2, 470.9; range 49.8 to 1086.4] (n=42)",9,,,,
+A,1.1,hard rel 5 ms,"43/50 [0.74,0.93]","median 7.8 [IQR 7.8, 430.0; range 7.6 to 996.1] (n=43)",36,"median 92.4 [IQR 73.4, 125.8; range -184.8 to 536.0] (n=42)",40.0,2.0,"median 2.8 [IQR 2.8, 425.0; range 2.6 to 991.1] (n=43)"
+A,1.1,hard rel 20 ms,"42/50 [0.71,0.92]","median 21.3 [IQR 21.2, 21.4; range 21.1 to 1043.5] (n=42)",36,"median 81.7 [IQR 64.1, 124.3; range -17.2 to 775.9] (n=41)",40.0,1.0,"median 1.3 [IQR 1.2, 1.4; range 1.1 to 1023.5] (n=42)"
+A,1.1,hard rel 100 ms,"39/50 [0.65,0.87]","median 104.9 [IQR 104.6, 134.6; range 104.0 to 1090.5] (n=39)",2,"median 1.0 [IQR -21.7, 51.5; range -54.4 to 147.3] (n=39)",20.0,19.0,"median 4.9 [IQR 4.6, 34.6; range 4.0 to 990.5] (n=39)"
+A,1.2,easy,"48/50 [0.87,0.99]","median 89.7 [IQR 60.7, 125.2; range 34.2 to 1082.3] (n=48)",4,,,,
+A,1.2,hard rel 5 ms,"50/50 [0.93,1.00]","median 7.8 [IQR 7.7, 7.9; range 7.5 to 996.9] (n=50)",49,"median 80.0 [IQR 50.1, 101.3; range -29.4 to 620.3] (n=48)",47.0,1.0,"median 2.8 [IQR 2.7, 2.9; range 2.5 to 991.9] (n=50)"
+A,1.2,hard rel 20 ms,"48/50 [0.87,0.99]","median 21.2 [IQR 21.2, 21.3; range 21.0 to 1011.9] (n=48)",47,"median 64.6 [IQR 35.6, 83.1; range 5.2 to 260.0] (n=46)",46.0,0.0,"median 1.2 [IQR 1.2, 1.3; range 1.0 to 991.9] (n=48)"
+A,1.2,hard rel 100 ms,"50/50 [0.93,1.00]","median 104.7 [IQR 104.3, 105.0; range 103.6 to 1091.7] (n=50)",4,"median -26.2 [IQR -48.0, -6.6; range -124.5 to 522.9] (n=48)",10.0,38.0,"median 4.7 [IQR 4.3, 5.0; range 3.6 to 991.7] (n=50)"
+A,1.5,easy,"50/50 [0.93,1.00]","median 41.3 [IQR 27.7, 52.8; range 17.4 to 90.2] (n=50)",0,,,,
+A,1.5,hard rel 5 ms,"50/50 [0.93,1.00]","median 7.8 [IQR 7.6, 7.8; range 7.5 to 8.2] (n=50)",50,"median 33.7 [IQR 20.1, 44.9; range 9.6 to 82.1] (n=50)",50.0,0.0,"median 2.8 [IQR 2.6, 2.8; range 2.5 to 3.2] (n=50)"
+A,1.5,hard rel 20 ms,"50/50 [0.93,1.00]","median 21.2 [IQR 21.1, 21.3; range 20.9 to 21.6] (n=50)",50,"median 20.2 [IQR 6.7, 31.5; range -3.8 to 68.6] (n=50)",45.0,5.0,"median 1.2 [IQR 1.1, 1.3; range 0.9 to 1.6] (n=50)"
+A,1.5,hard rel 100 ms,"50/50 [0.93,1.00]","median 104.0 [IQR 103.7, 108.3; range 103.0 to 137.4] (n=50)",0,"median -63.5 [IQR -76.1, -58.2; range -86.3 to -23.8] (n=50)",0.0,50.0,"median 4.0 [IQR 3.7, 8.3; range 3.0 to 37.4] (n=50)"
+B,1.05,easy,"30/50 [0.46,0.72]","median 61.8 [IQR 31.0, 120.5; range 3.8 to 980.6] (n=30)",0,,,,
+B,1.05,hard rel 5 ms,"32/50 [0.50,0.76]","median 8.3 [IQR 8.2, 8.4; range 8.1 to 8.6] (n=32)",32,"median 53.4 [IQR 22.8, 112.1; range -4.6 to 972.4] (n=30)",29.0,1.0,"median 3.3 [IQR 3.2, 3.4; range 3.1 to 3.6] (n=32)"
+B,1.05,hard rel 20 ms,"32/50 [0.50,0.76]","median 22.0 [IQR 21.9, 22.1; range 21.9 to 22.3] (n=32)",32,"median 39.7 [IQR 9.1, 98.4; range -18.3 to 958.7] (n=30)",24.0,6.0,"median 2.0 [IQR 1.9, 2.1; range 1.9 to 2.3] (n=32)"
+B,1.05,hard rel 100 ms,"32/50 [0.50,0.76]","median 100.3 [IQR 100.2, 117.8; range 100.1 to 819.0] (n=32)",19,"median -54.1 [IQR -79.3, -8.4; range -97.7 to 637.7] (n=30)",7.0,23.0,"median 0.3 [IQR 0.2, 17.8; range 0.1 to 719.0] (n=32)"
+B,1.1,easy,"40/50 [0.67,0.89]","median 31.1 [IQR 18.4, 41.4; range 1.6 to 958.3] (n=40)",1,,,,
+B,1.1,hard rel 5 ms,"43/50 [0.74,0.93]","median 8.3 [IQR 8.2, 8.4; range 8.1 to 8.6] (n=43)",43,"median 22.8 [IQR 10.2, 33.1; range -6.9 to 950.2] (n=40)",37.0,3.0,"median 3.3 [IQR 3.2, 3.4; range 3.1 to 3.6] (n=43)"
+B,1.1,hard rel 20 ms,"43/50 [0.74,0.93]","median 22.0 [IQR 21.9, 22.1; range 21.8 to 22.3] (n=43)",43,"median 9.0 [IQR -3.5, 19.4; range -20.5 to 936.4] (n=40)",27.0,13.0,"median 2.0 [IQR 1.9, 2.1; range 1.8 to 2.3] (n=43)"
+B,1.1,hard rel 100 ms,"43/50 [0.74,0.93]","median 100.3 [IQR 100.1, 106.7; range 100.0 to 1052.1] (n=43)",23,"median -75.4 [IQR -86.2, -63.8; range -183.8 to 86.8] (n=40)",2.0,38.0,"median 0.3 [IQR 0.1, 6.7; range 0.0 to 952.1] (n=43)"
+B,1.2,easy,"50/50 [0.93,1.00]","median 11.9 [IQR 7.4, 17.6; range 1.4 to 76.1] (n=50)",2,,,,
+B,1.2,hard rel 5 ms,"50/50 [0.93,1.00]","median 8.3 [IQR 8.2, 8.4; range 8.0 to 8.6] (n=50)",50,"median 3.7 [IQR -0.8, 9.1; range -7.0 to 68.0] (n=50)",35.0,15.0,"median 3.3 [IQR 3.2, 3.4; range 3.0 to 3.6] (n=50)"
+B,1.2,hard rel 20 ms,"49/50 [0.90,1.00]","median 22.0 [IQR 21.9, 22.0; range 21.7 to 22.3] (n=49)",49,"median -10.1 [IQR -14.6, -4.9; range -20.6 to 54.3] (n=49)",9.0,40.0,"median 2.0 [IQR 1.9, 2.0; range 1.7 to 2.3] (n=49)"
+B,1.2,hard rel 100 ms,"48/50 [0.87,0.99]","median 100.1 [IQR 100.0, 101.5; range 99.7 to 129.3] (n=48)",27,"median -89.6 [IQR -93.4, -84.0; range -98.5 to -37.8] (n=48)",0.0,48.0,"median 0.1 [IQR 0.0, 1.5; range -0.3 to 29.3] (n=48)"
+B,1.5,easy,"50/50 [0.93,1.00]","median 1.6 [IQR 1.4, 2.7; range 1.0 to 8.4] (n=50)",29,,,,
+B,1.5,hard rel 5 ms,"50/50 [0.93,1.00]","median 8.3 [IQR 8.1, 8.3; range 8.0 to 11.7] (n=50)",49,"median -6.8 [IQR -6.9, -5.7; range -9.8 to 0.3] (n=50)",2.0,48.0,"median 3.3 [IQR 3.1, 3.3; range 3.0 to 6.7] (n=50)"
+B,1.5,hard rel 20 ms,"50/50 [0.93,1.00]","median 21.9 [IQR 21.8, 22.0; range 21.7 to 22.2] (n=50)",50,"median -20.4 [IQR -20.5, -19.3; range -20.7 to -13.3] (n=50)",0.0,50.0,"median 1.9 [IQR 1.8, 2.0; range 1.7 to 2.2] (n=50)"
+B,1.5,hard rel 100 ms,"50/50 [0.93,1.00]","median 99.3 [IQR 99.2, 99.5; range 98.7 to 101.2] (n=50)",0,"median -97.5 [IQR -97.8, -97.0; range -98.7 to -91.5] (n=50)",0.0,50.0,"median -0.7 [IQR -0.8, -0.5; range -1.3 to 1.2] (n=50)"
